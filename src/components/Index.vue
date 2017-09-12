@@ -54,6 +54,7 @@
     <div>
       <div class="container">
         <cc-form></cc-form>
+        <cc-list></cc-list>
       </div>
     </div>
   </q-layout>
@@ -62,10 +63,11 @@
 <script>
 import { openURL, QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain } from 'quasar'
 import CcForm from './expenses/form.vue'
+import CcList from './expenses/list.vue'
 
 export default {
   name: 'index',
-  components: { CcForm, QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain },
+  components: { CcForm, CcList, QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain },
   data () {
     return {
       orienting: window.DeviceOrientationEvent && !this.$q.platform.is.desktop,
