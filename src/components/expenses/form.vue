@@ -32,8 +32,7 @@ import { QDatetime } from 'quasar'
   <form @submit.prevent="submit">
     <input ref="amount" class="my-input" type="number" v-model="expense.amount" placeholder="R$">
     <input class="my-input" type="text" v-model="expense.descrisotion" placeholder="Descrição">
-    <input class="my-input" type="date" v-model="expense.date" placeholder="Data">
-    <q-datetime type="date" v-model="expense.date" color="amber" stack-label="No 'Clear' button" no-clear/>
+    <q-datetime type="date" v-model="expense.date" color="amber" no-clear/>
     <button class="primary my-button">Salvar</button>
   </form>
 </template>
