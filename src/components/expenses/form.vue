@@ -1,31 +1,31 @@
 <script>
 import { QDatetime } from 'quasar'
-  export default {
-    components: { QDatetime },
+export default {
+  components: { QDatetime },
 
-    data () {
-      return {
-        expense: {
-          amount: '',
-          descrisotion: '',
-          date: new Date()
-        }
-      }
-    },
-    methods: {
-      submit () {
-        const cloned = JSON.parse(JSON.stringify(this.expense))
-        this.$store.commit('ADD_EXPENSE', cloned)
-        this.reset()
-      },
-      reset () {
-        this.expense.amount = ''
-        this.expense.descrisotion = ''
-        this.expense.date = new Date()
-        this.$refs.amount.focus()
+  data () {
+    return {
+      expense: {
+        amount: '',
+        descrisotion: '',
+        date: new Date()
       }
     }
+  },
+  methods: {
+    submit () {
+      const cloned = JSON.parse(JSON.stringify(this.expense))
+      this.$store.commit('ADD_EXPENSE', cloned)
+      this.reset()
+    },
+    reset () {
+      this.expense.amount = ''
+      this.expense.descrisotion = ''
+      this.expense.date = new Date()
+      this.$refs.amount.focus()
+    }
   }
+}
 </script>
 
 <template>

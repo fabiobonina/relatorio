@@ -9,12 +9,17 @@ export default {
 </script>
 
 <template>
-  <div v-for="expense in list">
-    <p> {{ expense.date }} | {{ expense.amout }}</p>
-    <p>{{ expense.description }}</p>
+  <div>
+    <div class="expense" v-for="expense in list">
+    <p>{{ expense.date }} | {{ expense.amount }}</p>
+    <p>{{ expense.descrisotion }}</p>
   </div>
+  </div>
+  
 </template>
 
-<style lang="stylus">
-
+<style>
+  .expense {
+    border-bottom:
+  }
 </style>
